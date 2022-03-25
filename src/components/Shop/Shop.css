@@ -23,3 +23,62 @@
     border: 1px solid #95A0A7;
     background-color: aliceblue;
 }
+
+
+@media only screen and (max-width: 1400px) {
+    .shop{
+        grid-template-columns: 70% 30% ;
+        padding:40px;
+    }
+    .product-container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+  }
+@media only screen and (max-width: 1000px) {
+    .shop{
+        padding:20px;
+    }
+    .product-container{
+        gap: 20px;
+    }
+    .cart-container{
+        margin-left: 20px;
+    }
+  }
+@media only screen and (max-width: 900px) {
+    .shop{
+        grid-template-columns: 60% 40% ;
+    }
+    .product-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+  }
+@media only screen and (max-width: 700px) {
+    .btn button{
+        margin: 5px;
+        padding: 10px;
+        font-size: 12px;
+    }
+  }
+@media only screen and (max-width: 600px) {
+    .shop{
+        padding:14px;
+    }
+    .product-container{
+        gap: 15px;
+    }
+    .cart-container{
+        margin-left: 15px;
+    }
+  }
+@media only screen and (max-width: 500px) {
+    .product-container{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .shop{
+        grid-template-columns: 50% 50% ;
+    }
+  }

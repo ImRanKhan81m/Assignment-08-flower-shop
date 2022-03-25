@@ -35,3 +35,45 @@
 .icon{
     margin-left: 5px;
 }
+
+
+
+
+@media only screen and (max-width: 1110px) {
+    .product button{
+        margin-top: 30px;
+        margin-bottom: 18px;
+        padding: 10px 10px;
+    }
+  }
+@media only screen and (max-width: 1060px) {
+    .product img{
+        width: 90%;
+        padding: 10px;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .product button{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .icon{
+        margin-left: 2px;
+        font-size: 13px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .product-info{
+        padding:0 10px;
+    }
+    .product button{
+        padding: 8px 8px;
+        font-size: 11px;
+    }
+    .icon{
+        margin-left: 2px;
+        font-size: 13px;
+    }
+  }
