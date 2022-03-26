@@ -1,6 +1,4 @@
-.shop-container{
-    margin-bottom: 200px;
-}
+
 
 .shop{
     display: grid;
@@ -35,13 +33,14 @@
     border: 1px solid #95A0A7;
     background-color: aliceblue;
 }
-.quize-container{
+.quiz-container{
     width: 50%;
     margin: auto;
     background-color: rgba(250, 235, 215, 0.781);
     padding: 20px;
     border-radius: 20px;
     border: 1px solid #95A0A7;
+    margin-top: 20px;
 }
 .question{
     text-align: start;
@@ -51,8 +50,39 @@
     margin-top: 70px;
     margin-bottom:8px;
 }
+.question h6{
+    margin-top:15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
 .question p{
     margin: 0;
+    margin-left: 15px;
+}
+.GeneratedTable{
+   background-color:aliceblue;
+   width: 100%;
+   color: #000000;
+   border-radius: 10px;
+   border: 1px solid #95A0A7;
+   border-collapse: collapse;
+
+}
+.GeneratedTable td, th{
+    width: 50%;
+    border: 1px solid rgba(19, 19, 19, 0.192);
+    padding: 8px;
+}
+.GeneratedTable thead{
+    background-color:aliceblue;
+}
+.footer{
+    background-color: #010127;
+    padding: 20px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.698);
+    margin-top: 80px;
+    
 }
 
 

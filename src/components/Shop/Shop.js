@@ -58,16 +58,53 @@ const Shop = () => {
             </div>
         </div>
 
-        <div className='quize-container'>
+        <div className='quiz-container'>
             <h1>Question Answer</h1>
             <div className='question'>
                 <h3>1) How react works?</h3>
                 <p> <b>Answer:</b> React is a JavaScript library for building user interfaces. React works in declarative code.We use declarative code to create components.React has virtual DOM. Virtual DOM will be an exact copy of real DOM and creates a list of those changes that need to be made to the actual DOM.</p>
             </div>
             <div className='question'>
-                <h3>1) How react works?</h3>
-                <p> <b>Answer:</b>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam libero, totam eum explicabo ratione praesentium necessitatibus voluptatibus provident porro, nulla fuga voluptates laborum illo sint molestiae itaque consequuntur? Vitae at hic a eveniet? Iure nostrum quos architecto laboriosam molestias deleniti velit ratione, quis tempora eos consectetur repudiandae esse sit adipisci ut magnam. Atque, omnis explicabo quos dignissimos placeat earum quasi!</p>
+                <h3>1) What is the difference between props and state in React?</h3>
+                <h6>Answer: </h6>
+                
+            <table class="GeneratedTable">
+               <thead>
+                    <tr>
+                      <th>Props</th>
+                      <th>State</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <tr>
+                       <td>1. Props are read-only.</td>
+                       <td> 1. State changes can be asynchronous.</td>
+                    </tr>
+                    <tr>
+                       <td>2. Props are immutable.</td>
+                       <td>2. State is mutable.</td>
+                    </tr>  
+                    <tr>
+                       <td>3. Props can be accessed by the child component.</td>
+                       <td>3. State cannot be accessed by child components.</td>
+                    </tr>  
+                    <tr>
+                       <td>4. Stateless component can have Props.</td>
+                       <td>4. Stateless components cannot have State.</td>
+                    </tr>  
+                    <tr>
+                       <td>4. Props make components reusable.</td>
+                       <td>4. State cannot make components reusable.</td>
+                    </tr>  
+               </tbody>
+            </table>
+
+
             </div>
+        </div>
+
+        <div className="footer">
+            <p>Copyright © 2022-24. All Rights Reserved By Imran Hossen</p>
         </div>
         </div>
     );
