@@ -8,7 +8,6 @@ const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
     const [randomProduct, setRandomProduct] =useState([]);
-    console.log(randomProduct);
 
 
     useEffect( () =>{
@@ -23,7 +22,6 @@ const Shop = () => {
         setCart(newDetail);
     }
     const handleRandomProduct =(cart) =>{
-        console.log(cart);
         const randomProducts = cart[Math.floor(Math.random() * cart.length)]
         setRandomProduct(randomProducts);
     }
@@ -45,9 +43,10 @@ const Shop = () => {
                     cart.map(carts => <Cart key={carts.id} carts={carts}></Cart>)
                 }
                 <div className='btn'>
-                <button onClick={()=>handleRandomProduct(cart)}>CHOOSE 1 FOR ME</button>
+                <button className='first-btn' onClick={()=>handleRandomProduct(cart)}>CHOOSE 1 FOR ME</button>
                 <button>CHOOSE AGAIN</button>
                 <Random random={randomProduct}></Random>
+                
                 </div>
             </div>
         </div>
