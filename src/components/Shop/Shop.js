@@ -18,8 +18,19 @@ const Shop = () => {
     
     
     const handleAddToCart =(product) =>{
-        const cartArray = [...cart, product];
-        setCart(cartArray);
+        let newCart = [];
+        const exists = cart.find(products => products.id === product.id);
+        if(!exists){
+            product.quantity = 1;
+            newCart = [...cart, product];
+
+        }else{
+            const rest = cart.filter(products => products.id !== product.id);
+            exists.quantity = exists.quantity +1;
+            newCart = [...rest, exists]
+        }
+        
+        setCart(newCart);
     }
     const handleRandomProduct =(cart) =>{
         const randomProducts = cart[Math.floor(Math.random() * cart.length)]
