@@ -20,16 +20,18 @@ const Shop = () => {
     const handleAddToCart =(product) =>{
         let newCart = [];
         const exists = cart.find(products => products.id === product.id);
-        if(!exists){
+        if(cart.length > 3){
+            alert('Oppps!! You Can Select Only 4 Items.');
+            newCart = [...cart]
+        }else if(!exists){
             product.quantity = 1;
             newCart = [...cart, product];
 
-        }else{
+        }else {
             const rest = cart.filter(products => products.id !== product.id);
             exists.quantity = exists.quantity +1;
             newCart = [...rest, exists]
         }
-        
         setCart(newCart);
     }
     const handleRandomProduct =(cart) =>{
