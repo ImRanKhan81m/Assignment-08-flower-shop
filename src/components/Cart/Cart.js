@@ -7,7 +7,6 @@ const Cart = (props) => {
     const {img, name} = props.carts;
     return (
         <div className='cart'>
-            
             <div className='cart-details'>
                 <img src={img} alt="" />
                 <h3>{name}</h3>

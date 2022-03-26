@@ -42,8 +42,9 @@ const Shop = () => {
                         ></Product>)
                 }
             </div>
-            <div className="cart-container">
-                 <h2>Selected Flowers</h2>
+            <div className="cart-content">
+                <div className="cart-container">
+                <h2>Selected Flowers</h2>
                 {
                     cart.map(carts => <Cart key={carts.id} carts={carts}></Cart>)
                 }
@@ -53,6 +54,7 @@ const Shop = () => {
                 <Random random={randomProduct}></Random>
                 
                 </div>
+                </div>
             </div>
         </div>
 
@@ -60,7 +62,7 @@ const Shop = () => {
             <h1>Question Answer</h1>
             <div className='question'>
                 <h3>1) How react works?</h3>
-                <p> <b>Answer:</b>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam libero, totam eum explicabo ratione praesentium necessitatibus voluptatibus provident porro, nulla fuga voluptates laborum illo sint molestiae itaque consequuntur? Vitae at hic a eveniet? Iure nostrum quos architecto laboriosam molestias deleniti velit ratione, quis tempora eos consectetur repudiandae esse sit adipisci ut magnam. Atque, omnis explicabo quos dignissimos placeat earum quasi!</p>
+                <p> <b>Answer:</b> React is a JavaScript library for building user interfaces. React works in declarative code.We use declarative code to create components.React has virtual DOM. Virtual DOM will be an exact copy of real DOM and creates a list of those changes that need to be made to the actual DOM.</p>
             </div>
             <div className='question'>
                 <h3>1) How react works?</h3>
