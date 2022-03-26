@@ -77,4 +77,8 @@
         margin-left: 2px;
         font-size: 13px;
     }
+    .product img{
+        width: 80%;
+        padding: 10px;
+    }
   }
