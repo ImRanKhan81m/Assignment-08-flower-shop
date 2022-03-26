@@ -16,18 +16,23 @@ const Shop = () => {
         .then(data => setProducts(data))
     }, []);
     
-
+    
     const handleAddToCart =(product) =>{
-        const newDetail = [...cart, product];
-        setCart(newDetail);
+        const cartArray = [...cart, product];
+        setCart(cartArray);
     }
     const handleRandomProduct =(cart) =>{
         const randomProducts = cart[Math.floor(Math.random() * cart.length)]
         setRandomProduct(randomProducts);
     }
+    const handleRemoveCart =() =>{
+        setCart([]);
+        setRandomProduct([])
+    }
     
     return (
-        <div className='shop'>
+        <div className='shop-container'>
+            <div className='shop'>
             <div className="product-container">
                 {
                     products.map(product => <Product 
@@ -43,12 +48,25 @@ const Shop = () => {
                     cart.map(carts => <Cart key={carts.id} carts={carts}></Cart>)
                 }
                 <div className='btn'>
-                <button className='first-btn' onClick={()=>handleRandomProduct(cart)}>CHOOSE 1 FOR ME</button>
-                <button>CHOOSE AGAIN</button>
+                <button onClick={()=>handleRandomProduct(cart)}>CHOOSE 1 FOR ME</button>
+                <button onClick={handleRemoveCart}>CHOOSE AGAIN</button>
                 <Random random={randomProduct}></Random>
                 
                 </div>
             </div>
+        </div>
+
+        <div className='quize-container'>
+            <h1>Question Answer</h1>
+            <div className='question'>
+                <h3>1) How react works?</h3>
+                <p> <b>Answer:</b>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam libero, totam eum explicabo ratione praesentium necessitatibus voluptatibus provident porro, nulla fuga voluptates laborum illo sint molestiae itaque consequuntur? Vitae at hic a eveniet? Iure nostrum quos architecto laboriosam molestias deleniti velit ratione, quis tempora eos consectetur repudiandae esse sit adipisci ut magnam. Atque, omnis explicabo quos dignissimos placeat earum quasi!</p>
+            </div>
+            <div className='question'>
+                <h3>1) How react works?</h3>
+                <p> <b>Answer:</b>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam libero, totam eum explicabo ratione praesentium necessitatibus voluptatibus provident porro, nulla fuga voluptates laborum illo sint molestiae itaque consequuntur? Vitae at hic a eveniet? Iure nostrum quos architecto laboriosam molestias deleniti velit ratione, quis tempora eos consectetur repudiandae esse sit adipisci ut magnam. Atque, omnis explicabo quos dignissimos placeat earum quasi!</p>
+            </div>
+        </div>
         </div>
     );
 };
