@@ -68,7 +68,7 @@ const Shop = () => {
                 <h3>1) What is the difference between props and state in React?</h3>
                 <h6>Answer: </h6>
                 
-            <table class="GeneratedTable">
+            <table className="GeneratedTable">
                <thead>
                     <tr>
                       <th>Props</th>
